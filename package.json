@@ -3,7 +3,6 @@
   "description": "A basic web generator for starting a project utilising Node, Express, Grunt, Jade and SASS",
   "version": "0.0.1",
   "private": "true",
-  
   "keywords": [
     "Node",
     "Express",
@@ -11,32 +10,28 @@
     "Jade",
     "Grunt"
   ],
-  
   "author": "Trevor Saint",
-  
   "engines": {
     "node": "4.4.6"
   },
-  
   "dependencies": {
     "express": "4.14.0",
     "jade": "1.11.0",
-    "grunt": "1.0.0",
-    "grunt-contrib-sass": "1.0.0",
-    "grunt-contrib-jshint": "1.0.0"
+    "grunt": "0.4.5",
+    "grunt-express-server": "^0.5.3",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   },
-  
   "devDependencies": {
     "grunt-cli": "1.2.0"
   },
-  
   "repository": {
     "type": "git",
     "url": ""
   },
-  
   "scripts": {
     "start": "node app.js"
   }
-  
 }
