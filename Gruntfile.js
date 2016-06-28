@@ -25,25 +25,6 @@ module.exports = function (grunt) {
         }
 
       },
-      
-      
-      jade: {
-       
-        compile: {
-          
-          options: {
-            data: {
-              debug: false
-            }
-          },
-          
-          files: {
-            "path/to/dest.html": ["views/*.jade"]
-          }
-          
-        }
-        
-      },
 
 
       watch: {
@@ -83,14 +64,13 @@ module.exports = function (grunt) {
 
 
   ['grunt-express-server',
-   'grunt-contrib-jade',
    'grunt-contrib-watch'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
 
-  grunt.registerTask('default', ['express:dev', 'jade', 'watch']);
+  grunt.registerTask('default', ['express:dev', 'watch']);
 
 
 };
