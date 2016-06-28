@@ -4,10 +4,12 @@
  
 var express = require('express');
 var app     = express();
+var routes  = require(__dirname + '/routes/');
+var port    = (process.env.PORT || 3000);
     
     
 /*
- * Middleware to serve static assets
+ * Serve static assets
  */
     
 app.use('/routes', express.static(__dirname + '/routes'));
@@ -20,17 +22,18 @@ app.use('/views',  express.static(__dirname + '/views'));
  */
 
 app.set('view engine', 'jade');
-   
-   
+              
+
 /*
- * Routing
- */ 
-    
-app.get('/', function (req, res) {
-  res.render('index');
-});
+ * Routes
+ */
         
-    
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
-});
+routes.bind(app, '/routes/');
+
+
+/*
+ * Start app
+ */
+
+app.listen(port);
+console.log('Listening on port ' + port);
