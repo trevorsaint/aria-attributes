@@ -508,6 +508,7 @@ main {
   font-weight: 400;
   text-transform: none;
   font-size-adjust: 0.5;
+  display: block;
   padding-top: 8px;
   padding-bottom: 7px;
   display: block;
@@ -555,6 +556,7 @@ main {
   font-weight: 400;
   text-transform: none;
   font-size-adjust: 0.5;
+  display: block;
   padding-top: 9px;
   padding-bottom: 6px;
   display: block;
