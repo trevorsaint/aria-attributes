@@ -20,13 +20,6 @@
     "node": "4.4.6"
   },
   
-  "dependencies": {
-    "express": "4.14.0",
-    "govuk_frontend_toolkit": "^4.9.1",
-    "govuk_template_mustache": "^0.17.0",
-    "govuk-elements-sass": "^1.1.4"
-  },
-  
   "devDependencies": {
     "jade": "1.11.0",
     "grunt": "0.4.5",
@@ -38,6 +31,18 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0"
   },
+  
+  "dependencies": {
+    "express": "4.14.0",
+    "govuk_frontend_toolkit": "^4.9.1",
+    "govuk_template_mustache": "^0.17.0",
+    "govuk-elements-sass": "^1.1.4"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trevorsaint/aria-attributes"
+  }
   
   "scripts": {
     "start": "node app.js"
