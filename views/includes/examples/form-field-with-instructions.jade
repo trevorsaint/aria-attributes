@@ -1,0 +1,41 @@
+h2(class='heading-medium') Form field with instructions
+  
+  
+p Using aria-describedby to associate instructions with form field.
+
+
+div(class='example')
+
+  form(class='form')
+      
+    div(class='form-group')
+    
+      label(for='case-unique-reference-number-aria')
+      
+        span(class='form-label-bold') Case or Unique Reference Number
+        span(class='form-hint' id='case-unique-reference-number-hint') Find this on your notice
+      
+      input(
+        class='form-control'
+        type='text'
+        id='case-unique-reference-number-aria'
+        required='required'
+        aria-required='true'
+        aria-describedby='case-unique-reference-number-hint'
+      )
+    
+
+pre(aria-hidden='true' role='presentation')
+  code(class='language-markup')
+    :escape
+      <!-- case or unique reference number -->
+      <div class="form-group">
+        
+        <label for="case-number">
+          <span class="form-label">Case or Unique Reference Number</span>
+          <span class="form-hint" id="case-number-hint">Find this on your notice</span>
+        </label>
+        
+        <input class="form-control" type="text" id="case-number" aria-describedby="case-number-hint" required>
+        
+      </div>

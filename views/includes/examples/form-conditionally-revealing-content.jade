@@ -1,0 +1,116 @@
+h2(class='heading-medium') Conditionally revealing content
+
+
+p Using aria-controls to create a cause and effects relationship.
+
+
+div(class='example')
+
+  form(class='form')
+  
+    fieldset
+    
+      legend
+        span(class='form-label-bold') How do you want to be contacted?
+        
+      div(class='form-group')
+        
+        label(class='block-label' for='contact-by-email' data-target='by-email')
+          input(
+            type='radio'
+            id='contact-by-email'
+            name='contact-group'
+            aria-controls='by-email'
+          ) 
+          | Email
+          
+        div(class='panel panel-border-narrow js-hidden' id='by-email')
+          label(class='form-label' for='contact-email') Email address
+          input(
+            class='form-control'
+            type='email'
+            id='contact-email'
+            name='contact-email'
+          )
+          
+        label(class='block-label' for='contact-by-phone' data-target='by-phone')
+          input(
+            type='radio'
+            id='contact-by-phone'
+            name='contact-group'
+            aria-controls='by-phone'
+          ) 
+          | Phone
+          
+        div(class='panel panel-border-narrow js-hidden' id='by-phone')
+          label(class='form-label' for='contact-phone') Phone number
+          input(
+            class='form-control'
+            type='tel'
+            id='contact-phone'
+            name='contact-phone'
+          )
+        
+        label(class='block-label' for='contact-by-text' data-target='by-text')
+          input(
+            type='radio'
+            id='contact-by-text'
+            name='contact-group'
+            aria-controls='by-text'
+          ) 
+          | Text message
+          
+        div(class='panel panel-border-narrow js-hidden' id='by-text')
+          label(class='form-label' for='contact-text') Mobile phone number
+          input(
+            class='form-control'
+            type='tel'
+            id='contact-text'
+            name='contact-text'
+          )
+          
+        
+pre(aria-hidden='true' role='presentation')
+  code(class='language-markup')
+    :escape
+      <fieldset>
+        
+        <legend>
+          <span class="form-label-bold">How do you want to be contacted?</span>
+        </legend>
+        
+        <div class="form-group">
+          
+          <!-- email address -->
+          <label class="block-label" for="contact-by-email" data-target="by-email">
+            <input type="checkbox" id="contact-by-email" name="contact-group" aria-controls="by-email">
+          </label>
+          
+          <div class="panel panel-border-narrow js-hidden" id="by-email" aria-hidden="true">
+            <label class="form-label" for="contact-email">Email address</label>
+            <input class="form-control" type="email" id="contact-email" name="contact-email">
+          </div>
+          
+          <!-- phone number -->
+          <label class="block-label" for="contact-by-phone" data-target="by-phone">
+            <input type="checkbox" id="contact-by-phone" name="contact-group" aria-controls="by-phone">
+          </label>
+          
+          <div class="panel panel-border-narrow js-hidden" id="by-phone" aria-hidden="true">
+            <label class="form-label" for="contact-phone">Phone number</label>
+            <input class="form-control" type="tel" id="contact-phone" name="contact-phone">
+          </div>
+          
+          <!-- mobile phone -->
+          <label class="block-label" for="contact-by-text" data-target="by-text">
+            <input type="checkbox" id="contact-by-text" name="contact-group" aria-controls="by-text">
+          </label>
+          
+          <div class="panel panel-border-narrow js-hidden" id="by-text" aria-hidden="true">
+            <label class="form-label" for="contact-text">Contact mobile phone</label>
+            <input class="form-control" type="tel" id="contact-text" name="contact-text">
+          </div>
+          
+        </div>
+      
+      </fieldset>

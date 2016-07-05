@@ -1,9 +1,31 @@
 extend layout.jade
 
 block title
-  title Jade templating
+  title ARIA Attributes
   
 block content
-  h1 Main heading
+
+
+  h1(class='heading-xlarge')
+    span(class='heading-secondary') Accessibility using
+    |  <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Attributes
+    
+  p(class='lede') This page demonstrates <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes applied to common elements.
+    
+    
+  include includes/examples/form-field-with-instructions.jade
   
-  h2 Secondary heading
+  
+  include includes/examples/multiple-form-fields-with-instructions.jade
+  
+  
+  include includes/examples/form-conditionally-revealing-content.jade
+  
+  
+  include includes/examples/multiple-form-fields-with-validation.jade
+  
+  
+  include includes/examples/progressive-collapsibles.jade
+  
+  
+  include includes/examples/aria-tab-interface.jade

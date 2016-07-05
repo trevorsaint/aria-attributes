@@ -1,0 +1,90 @@
+// ==========================================================================
+// Tabs
+// ==========================================================================
+
+
+$module: 'tab-interface';
+
+
+.#{$module} {
+  
+  
+  @at-root .js-enabled .#{$module} {
+    margin-bottom: 1em;
+   
+     
+    @include media(tablet) {
+    
+    
+      // Tab list
+      @at-root .tab-menu {
+        
+        ul {
+          float: left;
+          margin: 0;
+          width: 100%;
+        }
+        
+        li {
+          float: left;
+          margin: 0;
+          padding: 0;
+        }
+        
+        a {
+          background-color: $grey-3;
+          border: em(1) solid $grey-3;
+          display: block;
+          margin: em(5) em(5) em(5) 0;
+          padding: em(9) em(18);
+          text-decoration: none;
+        }
+        
+        [aria-selected='true'] {
+          background-color: $white;
+          border: em(1) solid $grey-2;
+          border-bottom: none;
+          color: $black;
+          cursor: default;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: em(14);
+          padding-bottom: em(15);
+          position: relative;
+          text-decoration: none;
+          z-index: 1;
+        }
+        
+        [aria-selected='false'] {
+          
+          &:focus {
+            background-color: $focus-colour;
+            outline: none;
+          }
+          
+        }
+        
+      }
+      
+      
+      // Tab content
+      @at-root .tab-content {
+        border-top: em(1) solid $grey-2; 
+        clear: both;
+        position: relative; top: em(-1);
+      }
+      
+    
+    }
+    
+    
+    // Hide elements
+    @at-root [aria-hidden='true'] {
+      display: none;  
+    }
+    
+    
+  }
+  
+  
+}

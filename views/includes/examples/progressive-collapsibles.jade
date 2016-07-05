@@ -1,0 +1,76 @@
+h2(class='heading-medium') Progressive collapsibles
+
+
+p Building accessible, collapsible content sections from basic flow.
+
+
+div(class='example')
+
+  
+  section(aria-labelledby='messages')
+  
+  
+    h2(class='heading-large' id='messages') Messages
+    
+    
+    p You have 2 new messages.
+  
+  
+    div(class='collapsible')
+    
+      div(class='collapsible-item')
+      
+        div(class='collapsible-heading')
+          h3(class='bold-medium') You have been given access to Agri Agents Ltd
+      
+        div(class='collapsible-content')
+          div(class='text')
+            p John Smith has given you permission to view and amend information about this business and make applications on their behalf.
+      
+      
+      div(class='collapsible-item')
+      
+        div(class='collapsible-heading')
+          h3(class='bold-medium') Welcome to Rural Payments
+      
+        div(class='collapsible-content')
+          div(class='text')
+            p Fusce a risus libero. Nam risus purus, pharetra eget porttitor in, dictum ut enim. In auctor, purus vitae luctus tempor.
+            
+        
+pre(aria-hidden='true' role='presentation')
+  code(class='language-markup')
+    :escape
+      <div class="collapsible">
+        
+        <!-- without javascript -->
+        <div class="collapsible-item">
+          
+          <div class="collapsible-heading">
+            <h3>You have been given access to Agri Agents Ltd</h3>
+          </div>
+          
+          <div class="collapsible-content">
+            <p>Some content goes here...</p>
+          </div>
+          
+        </div>
+        
+        <!-- with javascript -->
+        <div class="collapsible-item">
+          
+          <div class="collapsible-heading">
+            <h3>
+              <button aria-controls="collapsible-0" aria-expanded="false">
+                You have been given access to Agri Agents Ltd
+              </button>
+            </h3>
+          </div>
+          
+          <div class="collapsible-content" id="collpasible-0" aria-hidden="true">
+            <p>Some content goes here...</p>
+          </div>
+          
+        </div>
+        
+      </div>

@@ -1,0 +1,70 @@
+h2(class='heading-medium') Multiple form elements with errors
+
+div(class='example')
+
+  div(class='error-summary' role='group' tabindex='-1' aria-labelledby='error-summary-heading')
+  
+    h2(class='heading-medium error-summary-heading' id='error-summary-heading') Fix the following
+    
+    ul(class='error-summary-list')
+      li
+        a(href='#error-case-number') Case or Unique Reference Number
+      li
+        a(href='#error-your-postcode') Your postcode
+        
+        
+  div(class='form-group error')
+    
+    label(for='case-number' id='error-case-number') 
+      span(class='form-label-bold') Case or Unique Reference Number
+      span(class='form-hint' id='case-number-hint') Find this on your notice
+      span(class='error-message' id='error-message-case-number') Provide this information
+    
+    input(class='form-control' type='text' id='case-number' aria-describedby='error-message-case-number' aria-invalid='true')
+    
+    
+  div(class='form-group error')
+    
+    label(for='your-postcode' id='error-your-postcode') 
+      span(class='form-label-bold') Your postcode
+      span(class='error-message' id='error-message-your-postcode') Provide this information
+    
+    input(class='form-control form-control-1-4' type='text' id='your-postcode' aria-describedby='error-message-your-postcode' aria-invalid='true')
+          
+        
+pre(aria-hidden='true' role='presentation')
+  code(class='language-markup')
+    :escape
+      <div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading">
+        
+        <h2 class="heading-medium error-summary-heading" id="error-summary-heading">Fix the following</h2>
+        
+        <ul class="error-summary-list">
+          <li><a href="#error-case-number">Case or Unique Reference Number</a></li>
+          <li><a href="#error-your-postcode">Your postcode</a></li>
+        </ul>
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <label for="case-number" id="error-case-number">
+          <span class="form-label-bold">Case or Unique Reference Number</span>
+          <span class="form-hint" id="case-number-hint">Find this on your notice</span>
+          <span class="error-message" id="error-message-case-number">Provide this information</span>
+        </label>
+        
+        <input class="form-control" id="case-number" aria-describedby="error-message-case-number" aria-invalid="true">
+        
+      </div>
+      
+      <div class="form-group">
+        
+        <label for="your-postcode" id="error-your-postode">
+          <span class="form-label-bold">Your postcode</span>
+          <span class="error-message" id="error-message-your-postcode">Provide this information</span>
+        </label>
+        
+        <input class="form-control" id="your-postcode" aria-describedby="error-message-your-postcode" aria-invalid="true">
+        
+      </div>

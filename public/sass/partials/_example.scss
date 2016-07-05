@@ -1,0 +1,42 @@
+// Example container
+
+.example {
+  border: 1px solid $grey-2;
+  margin-top: em(15);
+  margin-bottom: em(20);
+  overflow: hidden;
+  padding: em(30);
+  position: relative;
+
+  &:before {
+    background: $grey-2;
+    color: white;
+    content: 'Example';
+    font-size: 14px;
+    line-height: 1;
+    padding: em(10);
+    position: absolute; top: 0; right: 0;
+    text-transform: uppercase;
+  }
+  
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+  
+}
+
+
+// Language markup blocks
+
+.language-markup {
+  display: none;
+}
+
+
+.js-enabled {
+  
+  .language-markup {
+    display: block;
+  }
+  
+}

@@ -1,0 +1,132 @@
+h2(class='heading-medium') <abbr title="Accessible Rich Internet Applications">ARIA</abbr> tab interface
+
+
+p A tab interface enhanced with <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes via javascript.
+
+
+div(class='example')
+
+  div(class='tab-interface')
+
+    div(class='tab-menu')
+      
+      ul(class='list')
+        
+        li
+          a(href='#before-you-start') Before you start
+        
+        li
+          a(href='#need-to-know') Need to know
+        
+        li
+          a(href='#ways-to-apply') Ways to apply
+
+    div(class='tab-content')
+      
+      section(class='text' id='before-you-start')
+        
+        h3(class='heading-medium') Before you start
+        
+        p To get your first provisional driving licence online for a car, motorcycle or moped you must:
+        
+        ul(class='list list-bullet')
+          
+          li be a resident of Great Britain &ndash; there&rsquo;s a different service in 
+            a(href='http://www.nidirect.gov.uk/applying-for-a-provisional-driving-licence' rel='external') Northern Ireland
+         
+          li meet the minimum age requirement
+         
+          li meet the 
+            a(href='/driving-eyesight-rules') minimum eyesight requirement
+         
+          li not be prevented from driving for any reason
+         
+          li pay &pound;50 by MasterCard, Visa, Electron, Maestro or Delta debit or credit card
+         
+          li have a valid <abbr title="United Kingdom">UK</abbr> passport or 
+            a(href='/driving-licence-application-identity-documents') other form of identity
+         
+          li have your National Insurance number if known
+        
+          li provide addresses where you&rsquo;ve lived for the last 3 years
+        
+      section(class='text' id='need-to-know')
+        
+        h3(class='heading-medium') Need to know
+        
+        ul(class='list list-bullet')
+          
+          li proof of identification required
+          
+          li 3 years of address details required
+          
+          li debit or credit card required
+        
+        
+      section(class='text' id='ways-to-apply')
+      
+        h3(class='heading-medium') Ways to apply
+        
+        p You can apply by post by completing a D1 application form, which you can get from the <a href="#">DVLA form ordering service</a> or from a Post Office.
+        
+        p You&rsquo;ll also need to include:
+        
+        ul(class='list list-bullet')
+        
+          li original documentation confirming your identity
+          
+          li a colour 
+            a(href='#') passport&ndash;style photograph
+            
+          li the fee of &pound;50 by cheque or postal order payable to <abbr title="Driver and Vehicle Licensing Agency">DVLA</abbr> (do not send cash)
+            
+        p Send your completed application and payment to <abbr title="Driver and Vehicle Licensing Agency">DVLA</abbr>, Swansea, SA99 1AD.
+          
+        p If you&rsquo;re including non&ndash; <abbr title="United Kingdom">UK</abbr> identity documents send your application and payment to <abbr title="Driver and Vehicle Licensing Agency">DVLA</abbr>, Swansea, SA99 1AF.
+          
+        
+pre(aria-hidden='true' role='presentation')
+  code(class='language-markup')
+    :escape
+      <div class="tab-interface">
+        
+        <div class="tab-menu">
+          
+          <ul role="tablist">
+            
+            <li role="presentation">
+              <a href="#tab1" tabindex="0" role="tab" aria-controls="tab1">Tab 1</a>
+            </li>
+            
+            <li role="presentation">
+              <a href="#tab2" tabindex="-1" role="tab" aria-controls="tab2" aria-hidden="true">Tab 2</a>
+            </li>
+            
+            <li role="presentation">
+              <a href="#tab3" tabindex="-1" role="tab" aria-controls="tab3" aria-hidden="true">Tab 3</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+        
+        <div class="tab-content">
+          
+          <section id="tab1" role="tabpanel">
+            <h3 tabindex="0">Tab 1</h3>
+            <p>Some content goes here...</p>
+          </section>
+          
+          <section id="tab2" role="tabpanel" aria-hidden="true">
+            <h3 tabindex="0">Tab 2</h3>
+            <p>Some content goes here...</p>
+          </section>
+          
+          <section id="tab3" role="tabpanel" aria-hidden="true">
+            <h3 tabindex="0">Tab 3</h3>
+            <p>Some content goes here...</p>
+          </section>
+          
+        </div>
+        
+      </div>

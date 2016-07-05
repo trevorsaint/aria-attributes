@@ -1,3 +1,14 @@
-body {
-  background: red;
-}
+/*
+ * Import GOVUK elements
+ */
+
+@import '../govuk/sass/govuk-elements';
+
+
+/*
+ * Import project specific
+ */
+
+@import 'modules/manifest';
+@import 'partials/manifest';
+@import 'vendor/manifest';

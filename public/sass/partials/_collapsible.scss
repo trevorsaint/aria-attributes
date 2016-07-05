@@ -1,0 +1,73 @@
+// ==========================================================================
+// Collapse
+// ==========================================================================
+
+
+$module: 'collapsible';
+
+
+.#{$module} {
+  
+  
+  @at-root .js-enabled .#{$module} {
+    margin-bottom: 1em;
+    
+    &-item {
+      border-bottom: 1px solid $grey-2;
+    
+      &:first-child {
+        border-top: 1px solid $grey-2;
+      }
+      
+    }
+    
+    &-heading {
+      
+      button {
+        background-color: transparent;
+        border: 0 none;
+        color: $link-colour;
+        cursor: pointer;
+        display: block;
+        font-size: 19px;
+        line-height: em(25);
+        padding: em(12) em(25);
+        position: relative;
+        text-align: left;
+        text-decoration: underline;
+        width: 100%;
+        
+        &:hover {
+          color: $link-hover-colour;
+        }
+        
+        &:before {
+          color: $link-colour;
+          content: '►';
+          position: absolute; left: 0; top: 50%;
+          transform: translateY(-50%); // IE9+
+        }
+        
+        &[aria-expanded=true] {
+          &:before {
+            content: '▼';
+          }
+        } 
+        
+        &::-moz-focus-inner {
+          border: 0;
+          padding: 0;
+        }
+        
+      }
+      
+    }
+    
+    // Hide elements
+    @at-root [aria-hidden='true'] {
+      display: none;  
+    }
+    
+  }
+  
+}

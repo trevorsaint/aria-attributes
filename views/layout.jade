@@ -1,11 +1,53 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    meta(charset="utf-8")
+    meta(charset='utf-8')
     block title
+    
+    script (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    
+    link(rel='stylesheet' media='screen' href='govuk/stylesheets/govuk-template.css')
+    link(rel='stylesheet' media='print' href='govuk/stylesheets/govuk-template-print.css')
+    link(rel='stylesheet' media='all' href='govuk/stylesheets/fonts.css')
+    
+    link(rel='apple-touch-icon-precomposed' sizes="152x152" href='govuk/images/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon-precomposed' sizes="120x120" href='govuk/images/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon-precomposed' sizes="76x76" href='govuk/images/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon-precomposed' href='govuk/images/apple-touch-icon-60x60.png')
+    
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(property='og:image' content='govuk/images/opengraph-image.png')
+    
+    link(rel='stylesheet' media='screen' href='styles/prism.css')
+    script(src='scripts/vendor/prism.js')
+    
+    link(rel='stylesheet' media='all' href='styles/main.css')
+    
   body
-    block content
+  
+  
+    script document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
     
-    script(src="//localhost:35729/livereload.js")
     
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+    include includes/skiplinks.jade
+    
+    
+    include includes/cookies.jade
+    
+    
+    include includes/header.jade
+              
+    
+    main(class='main' id='content' role='main')
+    
+    
+      include includes/phase-banner.jade
+      
+    
+      block content
+    
+    
+    include includes/footer.jade
+                  
+                  
+    include includes/scripts.jade

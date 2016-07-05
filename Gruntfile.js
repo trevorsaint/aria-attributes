@@ -27,6 +27,54 @@ module.exports = function (grunt) {
       },
       
       
+      copy: {
+        
+        govuk: {
+          
+          files: [
+            
+            {
+              expand: true,
+              cwd: 'node_modules/govuk_template_mustache/assets/stylesheets',
+              src: '**',
+              dest: 'public/govuk/stylesheets/'
+            },
+            
+            {
+              expand: true,
+              cwd: 'node_modules/govuk_template_mustache/assets/images',
+              src: '**',
+              dest: 'public/govuk/images/'
+            },
+            
+            {
+              expand: true,
+              cwd: 'node_modules/govuk_frontend_toolkit/images',
+              src: '**',
+              dest: 'public/govuk/images'
+            },
+            
+            {
+              expand: true,
+              cwd: 'node_modules/govuk_frontend_toolkit/stylesheets',
+              src: '**',
+              dest: 'public/govuk/sass'
+            },
+            
+            {
+              expand: true,
+              cwd: 'node_modules/govuk-elements-sass/public/sass',
+              src: '**',
+              dest: 'public/govuk/sass'
+            }
+            
+          ]
+          
+        }
+        
+      },
+      
+      
       sass: {
 
         dist: {
@@ -69,12 +117,22 @@ module.exports = function (grunt) {
   });
 
 
-  ['grunt-express-server', 'grunt-contrib-sass', 'grunt-contrib-watch'].forEach(function (task) {
+  [
+    'grunt-express-server', 
+    'grunt-contrib-copy',
+    'grunt-contrib-sass', 
+    'grunt-contrib-watch'
+  ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
 
-  grunt.registerTask('default', ['express:dev', 'sass', 'watch']);
+  grunt.registerTask('default', [
+    'express:dev', 
+    'copy:govuk',
+    'sass', 
+    'watch'
+  ]);
 
 
 };

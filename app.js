@@ -13,6 +13,7 @@ var app     = express();
  * Serve static assets
  */
   
+app.locals.pretty = true;
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -52,3 +53,13 @@ app.listen(3000, function() {
 
 
 module.exports = app;
+
+
+require('jade').filters.escape = function( block ) {
+  return block
+    .replace( /&/g, '&amp;'  )
+    .replace( /</g, '&lt;'   )
+    .replace( />/g, '&gt;'   )
+    .replace( /"/g, '&quot;' )
+    .replace( /#/g, '&#35;'  )
+}
