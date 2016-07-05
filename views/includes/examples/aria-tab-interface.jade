@@ -1,7 +1,7 @@
 h2(class='heading-medium') <abbr title="Accessible Rich Internet Applications">ARIA</abbr> tab interface
 
 
-p A tab interface enhanced with <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes via javascript.
+p(class='text') A tab interface enhanced with <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes with javascript. Find outx more information on <abbr title="Accessible Rich Internet Applications">ARIA</abbr> specific to <a href="http://oaa-accessibility.org/example/34" rel="external">tab interfaces</a>.
 
 
 div(class='example')
@@ -95,15 +95,15 @@ pre(aria-hidden='true' role='presentation')
           <ul role="tablist">
             
             <li role="presentation">
-              <a href="#tab1" tabindex="0" role="tab" aria-controls="tab1">Tab 1</a>
+              <a href="#tab1" tabindex="0" role="tab" aria-controls="tab1" aria-selected="true">Before you start</a>
             </li>
             
             <li role="presentation">
-              <a href="#tab2" tabindex="-1" role="tab" aria-controls="tab2" aria-hidden="true">Tab 2</a>
+              <a href="#tab2" tabindex="-1" role="tab" aria-controls="tab2">Need to know</a>
             </li>
             
             <li role="presentation">
-              <a href="#tab3" tabindex="-1" role="tab" aria-controls="tab3" aria-hidden="true">Tab 3</a>
+              <a href="#tab3" tabindex="-1" role="tab" aria-controls="tab3">Ways to apply</a>
             </li>
             
           </ul>
@@ -112,19 +112,16 @@ pre(aria-hidden='true' role='presentation')
         
         <div class="tab-content">
           
-          <section id="tab1" role="tabpanel">
-            <h3 tabindex="0">Tab 1</h3>
-            <p>Some content goes here...</p>
+          <section id="tab1" role="tabpanel" aria-labelledby="tab1">
+            <h3 tabindex="0">Before you start</h3>
           </section>
           
-          <section id="tab2" role="tabpanel" aria-hidden="true">
-            <h3 tabindex="0">Tab 2</h3>
-            <p>Some content goes here...</p>
+          <section id="tab2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
+            <h3 tabindex="0">Need to know</h3>
           </section>
           
-          <section id="tab3" role="tabpanel" aria-hidden="true">
-            <h3 tabindex="0">Tab 3</h3>
-            <p>Some content goes here...</p>
+          <section id="tab3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
+            <h3 tabindex="0">Ways to apply</h3>
           </section>
           
         </div>

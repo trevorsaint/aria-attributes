@@ -78,8 +78,8 @@
     
     // Make first tab selected and focusable
     $tablist.find('li:first-child a').attr({
-      'aria-selected' : true,
-      'tabindex' : 0
+      'tabindex' : 0,
+      'aria-selected' : true
     });
     
     
